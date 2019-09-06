@@ -1,9 +1,7 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 
-class CountButtons extends React.Component {
+export default class CountButtons extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -39,26 +37,13 @@ class CountButtons extends React.Component {
 
     render() {
         return (
-
             <div>
-                <Grid item>
-                <span>{this.state.count}</span>
-            <ButtonGroup
-              variant="contained"
-              color="secondary"
-              size="small"
-              aria-label="Large contained secondary button group"
-            >
+               <div>Pints Remaining: {this.state.count}</div> 
               <Button onClick={this.upCount}>+</Button>
-              
               <Button onClick={this.downCount}>-</Button>
               <Button onClick={this.resetCount}>reset</Button>
-            </ButtonGroup>
-            
-          </Grid>
             </div>
         );
     }
 }
 
-export default CountButtons;
