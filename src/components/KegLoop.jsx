@@ -1,10 +1,10 @@
 import React from 'react';
-import KegProperties from '.KegProperties';
+import KegProperties from './KegProperties';
 import Paper from '@material-ui/core/Paper';
-import { kegstore } from '../store';
+import { kegstore } from '../kegstore';
 
 
-function KegLoop() {
+export default function KegLoop() {
     return(
         <div>
             {kegstore.map((keg, index) =>
@@ -16,7 +16,7 @@ function KegLoop() {
                 abv={keg.abv}
                 key={index} />
             </Paper>
-                )}
+            )}
         </div>
-    )
+    );
 }
