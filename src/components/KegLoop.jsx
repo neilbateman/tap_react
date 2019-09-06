@@ -1,13 +1,13 @@
 import React from 'react';
 import KegProperties from './KegProperties';
-import Paper from '@material-ui/core/Paper';
+import {Paper, Container} from '@material-ui/core';
 import { kegstore } from '../kegstore';
 
 
 export default function KegLoop() {
     return(
         <div>
-            {kegstore.map((keg, index) =>
+            <Container>{kegstore.map((keg, index) =>
             <Paper>
                 <KegProperties type={keg.type}
                 brand={keg.brand}
@@ -16,7 +16,8 @@ export default function KegLoop() {
                 abv={keg.abv}
                 key={index} />
             </Paper>
-            )}
+            )}</Container>
+            
         </div>
     );
 }
