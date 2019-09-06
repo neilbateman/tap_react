@@ -6,6 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
+import { MemoryRouter as Router } from 'react-router';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,7 +33,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Keggety
+            <Link to="/">Home</Link> | <Link to="/kegs">Kegs</Link> | <Link to="/about">About</Link>
           </Typography>
           <Button color="inherit">Clickety</Button>
         </Toolbar>
