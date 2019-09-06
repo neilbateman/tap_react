@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddKeg(props) {
+export default function AddKeg(props) {
     let _type = null;
     let _brand = null;
     let _pints = null;
@@ -13,7 +13,7 @@ function AddKeg(props) {
     }
     return(
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
             <input
           type='text'
           id='type'
