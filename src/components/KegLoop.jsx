@@ -7,7 +7,8 @@ import { kegstore } from '../kegstore';
 export default function KegLoop() {
     return(
         <div>
-            <Container>{kegstore.map((keg, index) =>
+            <Container>
+            {kegstore.map((keg, index) =>
             <Paper>
                 <KegProperties type={keg.type}
                 brand={keg.brand}
@@ -16,8 +17,8 @@ export default function KegLoop() {
                 abv={keg.abv}
                 key={index} />
             </Paper>
-            )}</Container>
-            
+            )}
+            </Container>
         </div>
     );
 }
