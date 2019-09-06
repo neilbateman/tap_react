@@ -1,3 +1,8 @@
+## Component Tree
+![Image of Component Tree](assets/comptree.jpg)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
