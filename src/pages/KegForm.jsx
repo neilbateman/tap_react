@@ -1,12 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
+
 
 const ranges = [
   {
@@ -59,25 +57,26 @@ export default function FilledInputAdornments() {
   };
 
   return (
+
     <div className={classes.root}>
       <TextField
         id="filled-simple-start-adornment"
         className={clsx(classes.margin, classes.textField)}
         variant="filled"
-        label="With filled TextField"
+        label="Type"
         InputProps={{
-          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+          startAdornment: <InputAdornment position="start">Beer</InputAdornment>,
         }}
       />
       <TextField
         select
         className={clsx(classes.margin, classes.textField)}
         variant="filled"
-        label="With Select"
+        label="Amount"
         value={values.weightRange}
         onChange={handleChange('weightRange')}
         InputProps={{
-          startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+          startAdornment: <InputAdornment position="start">Pints</InputAdornment>,
         }}
       >
         {ranges.map(option => (
@@ -90,69 +89,11 @@ export default function FilledInputAdornments() {
         id="filled-adornment-amount"
         className={clsx(classes.margin, classes.textField)}
         variant="filled"
-        label="Amount"
+        label="Brand"
         value={values.amount}
         onChange={handleChange('amount')}
         InputProps={{
-          startAdornment: <InputAdornment position="start">$</InputAdornment>,
-        }}
-      />
-      <TextField
-        id="filled-adornment-weight"
-        className={clsx(classes.margin, classes.textField)}
-        variant="filled"
-        label="Weight"
-        value={values.weight}
-        onChange={handleChange('weight')}
-        helperText="Weight"
-        InputProps={{
-          endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
-        }}
-      />
-      <TextField
-        id="filled-adornment-password"
-        className={clsx(classes.margin, classes.textField)}
-        variant="filled"
-        type={values.showPassword ? 'text' : 'password'}
-        label="Password"
-        value={values.password}
-        onChange={handleChange('password')}
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <IconButton
-                edge="end"
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-              >
-                {values.showPassword ? <VisibilityOff /> : <Visibility />}
-              </IconButton>
-            </InputAdornment>
-          ),
-        }}
-      />
-      <TextField
-        id="filled-adornment-dense"
-        className={clsx(classes.margin, classes.textField)}
-        variant="filled"
-        margin="dense"
-        label="Amount in Euro"
-        InputProps={{
-          startAdornment: <InputAdornment position="start">€</InputAdornment>,
-        }}
-      />
-      <TextField
-        id="filled-adornment-extra-dense"
-        className={clsx(classes.margin, classes.textField)}
-        variant="filled"
-        margin="dense"
-        hiddenLabel
-        InputProps={{
-          inputProps: {
-            'aria-label': 'amount in Euro',
-          },
-          startAdornment: <InputAdornment position="start">€</InputAdornment>,
+          startAdornment: <InputAdornment position="start"></InputAdornment>,
         }}
       />
     </div>
