@@ -2,7 +2,6 @@ import React from 'react';
 import KegProperties from './KegProperties';
 import {Paper, Container, Grid, makeStyles } from '@material-ui/core';
 import { kegstore } from '../kegstore';
-import KegForm from '../pages/KegForm';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -21,8 +20,8 @@ export default function KegLoop() {
         <div className={classes.root}>
             <Grid container spacing={3}>
             <Container>
-            <Grid item xs={12}><Paper>Welcome to the TAPROOM</Paper></Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12}></Grid>
+            <Grid item xs={12}>
             {kegstore.map((keg, index) =>
             <Paper>
                 <KegProperties type={keg.type}
@@ -34,7 +33,6 @@ export default function KegLoop() {
             </Paper>
             )}
             </Grid>
-            <Grid item xs={6}><Paper><KegForm/></Paper></Grid>
             </Container>
         </Grid>
         </div>

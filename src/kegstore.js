@@ -27,27 +27,4 @@ export const kegstore = [
         price: 50,
         abv: 40
     },
-    {
-        type: 'Beer',
-        brand: 'Tecate',
-        pints: 100,
-        price: 2,
-        abv: 5
-    },
-    {
-        type: 'Beer',
-        brand: 'Tecate',
-        pints: 100,
-        price: 2,
-        abv: 5
-
-    },
-    {
-        type: 'Beer',
-        brand: 'Tecate',
-        pints: 100,
-        price: 2,
-        abv: 5
-
-    },
 ]
