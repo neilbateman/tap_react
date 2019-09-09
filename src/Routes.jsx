@@ -14,6 +14,7 @@ const Routes = () => (
     <Route exact path="/" component={HomePage} />
     <Route path="/kegs" component={KegList} />
     <Route path="/about" component={About} />
+    <Route path="/expansion" component={ExpansionPanelKegs} />
     <Route path="/order" component={AddKeg} />
   </Switch>
 );

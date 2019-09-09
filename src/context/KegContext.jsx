@@ -1,13 +1,13 @@
 import React, {useState, createContext} from 'react';
 
 
-export const KegContext = createContext();
-export const KegProvider = props => {
-    const [movies, setMovies] = useState([
+export let KegContext = createContext();
+export let KegProvider = props => {
+    let [kegs, setKegs] = useState([
         {
             type: 'Beer',
             brand: 'Tecate',
-            pints: 100,
+            pints: 345,
             price: 2,
             abv: 5,
             id: 12345
@@ -15,7 +15,7 @@ export const KegProvider = props => {
         {
             type: 'Cider',
             brand: 'Angry Orchard',
-            pints: 200,
+            pints: 9,
             price: 2,
             abv: 6,
             id: 2345
@@ -23,7 +23,7 @@ export const KegProvider = props => {
         {
             type: 'Beer',
             brand: 'Modelo',
-            pints: 100,
+            pints: 1020,
             price: 2,
             abv: 5,
             id: 958493
@@ -31,14 +31,14 @@ export const KegProvider = props => {
         {
             type: 'Tequila',
             brand: 'Mescale',
-            pints: 100,
+            pints: 1,
             price: 50,
             abv: 40,
             id: 12365
         },
     ]);
     return(
-        <KegContext.Provider value={[movies, setMovies]}>
+        <KegContext.Provider value={[kegs, setKegs]}>
             {props.children}
         </KegContext.Provider>
     );
