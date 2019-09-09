@@ -4,7 +4,7 @@ import HomePage from './components/HomePage';
 import KegLoop from './components/KegLoop';
 import About from './pages/About';
 import ExpansionPanelKegs from './pages/ExpansionPanelKegs';
-import KegForm from './pages/KegForm';
+import NewKegForm from './components/NewKegForm';
 
 
 const Routes = () => (
@@ -13,7 +13,7 @@ const Routes = () => (
     <Route path="/kegs" component={KegLoop} />
     <Route path="/about" component={About} />
     <Route path="/expansion" component={ExpansionPanelKegs} />
-    <Route path="/order" component={KegForm} />
+    <Route path="/order" component={NewKegForm} />
   </Switch>
 );
 
