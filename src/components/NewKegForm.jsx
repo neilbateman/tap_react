@@ -1,4 +1,5 @@
 import React from 'react';
+import {Paper, Container, Grid} from '@material-ui/core';
 
 export default function NewKeg(props) {
     let _type = null;
@@ -14,6 +15,7 @@ export default function NewKeg(props) {
 
     return (
         <div>
+            <Container>
             <form onSubmit={handleNewKegSubmit}>
                 <input
                     type='text'
@@ -35,8 +37,9 @@ export default function NewKeg(props) {
                     id='abv'
                     placeholder='ABV'
                     ref={(input) =>{_abv = input;}}/>
-                <button onClick type='submit'>Submit</button>         
+                <button onClick type='submit'>Submit</button>
             </form>
+            </Container>
         </div>
     );
 }
