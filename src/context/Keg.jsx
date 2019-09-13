@@ -1,9 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {Paper, Container, Grid} from '@material-ui/core';
 import KegCrimenter from './KegCrimenter';
+import {KegContext} from './KegContext';
 
 const Keg = ({type, brand, price, abv, id, pints}) => {
-    const kegInformation =  
+  const [kegs, setKegs] = useContext(KegContext);
+  let kegCount = kegs.length;
+    const kegInformation =
+    <Grid item xs={6}>
+    {[kegCount].map(value=>(
+      <Grid key={value} item>
     <Container>
         <Paper>
             <h4>Type: {type} | Brand: {brand}</h4>
@@ -12,10 +18,15 @@ const Keg = ({type, brand, price, abv, id, pints}) => {
             <h5><KegCrimenter/></h5>
         </Paper>
     </Container>
+    </Grid>
+    ))}
+    </Grid>;
     return(
+      <React.Fragment>
        <div>
        {kegInformation}
        </div>
+       </React.Fragment>
     );
 }
 
