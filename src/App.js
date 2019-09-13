@@ -11,11 +11,10 @@ import AddKeg from './context/AddKeg';
 function App() {
   return (
     <KegProvider>
-    <div className="App">  
+    <div className="App">
       <BrowserRouter>
       <NavBar/>
       <UserGreeting/>
-
       <Routes/>
       </BrowserRouter>
     </div>
