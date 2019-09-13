@@ -21,7 +21,7 @@ export default function Home() {
           <div className="App">
             <Typography variant="h3" component="h2" gutterBottom>
               Welcome to the React Tap Room!
-            </Typography>
+            </Typography><br/><br/>
             <img src={beer} className="App-logo" alt="logo" />
           </div>
         )};
