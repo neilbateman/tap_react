@@ -9,27 +9,35 @@ import KegList from './context/KegList'
 import AddKeg from './context/AddKeg';
 import beer from './assets/beer.svg';
 import { makeStyles } from '@material-ui/core/styles';
+import barstool from './assets/barstool.jpg'
+import {Paper, Container, Grid} from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { sizing } from '@material-ui/system';
+
+
+
 
 
 const useStyles = makeStyles({
   root: {
-    background: 'linear-gradient(#e66465, #9198e5);',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 'auto',
-    padding: '0 30px',
+    backgroundImage: 'url(${imageUrl});',
+    // border: 0,
+    // borderRadius: 3,
+    // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    // color: 'white',
+     height: '5000',
+    // padding: '0 30px',
 }
 });
 
-function App() {
+const App = () => {
+   const imageUrl = barstool;
   const classes = useStyles();
   return (
-
     <KegProvider>
-    <div className="App">
-    <div className={classes.root}>
+    <Container>
+    <div style={{backgroundImage: `url(${imageUrl})`}}>
+    <div className="App" >
       <BrowserRouter>
       <NavBar/>
       <UserGreeting/>
@@ -37,7 +45,7 @@ function App() {
       </BrowserRouter><br/><br/><br/>
   <br/><br/><br/></div>
     </div>
-
+    </Container>
     </KegProvider>
 
   );
