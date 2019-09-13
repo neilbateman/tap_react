@@ -6,12 +6,12 @@ const KegCrimenter = () => {
 
     const Increment = (e) => {
         e.preventDefault();
-        setPints(prevKegs => [...prevKegs, {pints: pints++}])
+        setPints(pints + 1)
     }
 
     const Decrement = (e) => {
         e.preventDefault();
-        setPints(prevKegs => [...prevKegs, {pints: pints--}])
+        setPints(pints - 1)
     }
     return(
         <div>

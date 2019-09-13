@@ -7,6 +7,8 @@ import UserGreeting from './components/UserGreeting';
 import {KegProvider} from './context/KegContext';
 import KegList from './context/KegList'
 import AddKeg from './context/AddKeg';
+import beer from './assets/beer.svg';
+
 
 function App() {
   return (
@@ -16,9 +18,11 @@ function App() {
       <NavBar/>
       <UserGreeting/>
       <Routes/>
-      </BrowserRouter>
+      </BrowserRouter><br/><br/><br/>
+  <img src={beer} className="App-logo" alt="logo" />
     </div>
     </KegProvider>
+
   );
 }
 
