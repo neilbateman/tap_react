@@ -15,7 +15,8 @@ function App() {
       <BrowserRouter>
       <NavBar/>
       <UserGreeting/>
-
+      <AddKeg/>
+      <KegList/>
       <Routes/>
       </BrowserRouter>
     </div>
