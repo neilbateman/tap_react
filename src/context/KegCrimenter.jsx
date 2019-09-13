@@ -1,22 +1,25 @@
 import React, {useContext} from 'react';
+import Button from '@material-ui/core/Button';
+
 import {KegContext} from './KegContext';
 
 const KegCrimenter = () => {
     const [pints, setPints] = useContext(KegContext);
 
-    const Increment = (e) => {
-        e.preventDefault();
-        setPints(pints + 1)
+    const Increment = () => {
+      let increment = pints +1;
+        setPints(increment)
     }
 
-    const Decrement = (e) => {
-        e.preventDefault();
-        setPints(pints - 1)
+    const Decrement = () => {
+      let decrement = pints - 1;
+        setPints(decrement)
     }
     return(
         <div>
-            <div onClick={Increment}>Add a keg</div>
-            <div onClick={Decrement}>Take a keg</div>
+            <Button onClick={Decrement}>Take a pint</Button>
+            <Button onClick={Increment}>Leave a pint</Button>
+
         </div>
     );
 };
