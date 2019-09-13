@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto';
+import '../App.css';
+import beer from '../assets/beer.svg';
 
 
 const useStyles = makeStyles({
@@ -16,9 +18,10 @@ const useStyles = makeStyles({
 export default function Home() {
   const classes = useStyles();
         return (
-          <div className={classes.root}>
+          <div className="App">
             <Typography variant="h3" component="h2" gutterBottom>
               Welcome to the React Tap Room!
             </Typography>
+            <img src={beer} className="App-logo" alt="logo" />
           </div>
         )};

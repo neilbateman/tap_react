@@ -35,7 +35,7 @@ function App() {
       <UserGreeting/>
       <Routes/>
       </BrowserRouter><br/><br/><br/>
-  <img src={beer} className="App-logo" alt="logo" /><br/><br/><br/></div>
+  <br/><br/><br/></div>
     </div>
 
     </KegProvider>
