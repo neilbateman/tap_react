@@ -17,8 +17,8 @@ const KegCrimenter = () => {
     }
     return(
         <div>
-            <Button onClick={Decrement}>Take a pint</Button>
-            <Button onClick={Increment}>Leave a pint</Button>
+            <Button>Take a pint</Button>
+            <Button>Leave a pint</Button>
 
         </div>
     );
