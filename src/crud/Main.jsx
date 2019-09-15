@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import{ Paper, Grid }from '@material-ui/core';
 import Table from './Table';
 import AddKegForm from './AddKegForm';
-
+import AddKeg from './AddKeg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,7 +39,7 @@ export default function Main() {
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Add Keg
-          <AddKegForm AddKeg={addKeg} />
+          <AddKeg addKeg={addKeg} />
           </Paper>
         </Grid>
         <Grid item xs={6}>
