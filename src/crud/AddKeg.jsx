@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Button from '@material-ui/core/Button';
+
 
 const AddKeg = props => {
   const initialFormState = { id: null, type: '', brand: '' }
@@ -24,7 +26,7 @@ const AddKeg = props => {
       <input type="text" name="type" value={keg.type} onChange={handleInputChange} />
       <label>Brand</label>
       <input type="text" name="brand" value={keg.brand} onChange={handleInputChange} />
-      <button>Add new keg</button>
+      <Button>Add new keg</Button>
     </form>
   )
 }
