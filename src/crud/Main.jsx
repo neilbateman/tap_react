@@ -31,6 +31,10 @@ export default function Main() {
     setKegs([...kegs, keg])
   };
 
+  const deleteKeg = id => {
+    setKegs(kegs.filter(keg => keg.id !== id))
+  }
+
   return (
     <div className={classes.root}>
 
@@ -44,7 +48,7 @@ export default function Main() {
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>View Kegs
-          <Table kegs={kegs}/>
+          <Table kegs={kegs} deleteKeg={deleteKeg}/>
           </Paper>
         </Grid>
         <Grid item xs={3}>
