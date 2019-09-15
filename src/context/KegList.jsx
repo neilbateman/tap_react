@@ -7,7 +7,7 @@ const KegList = () => {
     return(
         <div>
          {kegs.map(keg => (
-            <Keg type={keg.type} brand={keg.brand} price={keg.price} abv={keg.abv} pints={keg.pints} imageUrl={keg.imageUrl} key={keg.id} />
+            <Keg type={keg.type} brand={keg.brand}/>
         ))}
         </div>
     );

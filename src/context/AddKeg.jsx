@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {KegContext} from './KegContext';
 import {v4} from 'uuid';
 const AddKeg = () => {
@@ -28,9 +28,11 @@ const AddKeg = () => {
     const AddKeg = e => {
         e.preventDefault();
         setKegs(prevKegs => [...prevKegs, {type: type, brand: brand, pints: pints, price: price, abv: abv, id: v4()}])
-
     };
+    const EditKeg = e => {
+      e.preventDefault();
 
+    }
     return(
         <div>
         <h6>Add A Keg</h6>
@@ -45,5 +47,7 @@ const AddKeg = () => {
         </div>
     );
 };
+
+
 
 export default AddKeg;
