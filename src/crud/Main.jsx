@@ -4,6 +4,7 @@ import{ Paper, Grid }from '@material-ui/core';
 import Table from './Table';
 import AddKegForm from './AddKegForm';
 import AddKeg from './AddKeg';
+import EditKeg from './EditKeg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Main() {
+const Main = () => {
   const classes = useStyles();
   const kegData = [
     { id: 1, type: 'Beer', brand: 'Tecate' },
@@ -25,6 +26,19 @@ export default function Main() {
   ]
 
   const [kegs, setKegs] = useState(kegData);
+  const [editing, setEditing] = useState(false);
+  const initialFormState = { id: null, type: '', brand: ''};
+  const [currentKeg, setCurrentKeg] = useState(initialFormState);
+
+  const editKeg = keg => {
+    setEditing(true)
+    setCurrentKeg({ id: keg.id, type: keg.type, brand: keg.brand})
+  }
+
+  const updateKeg = (id, updatedKeg) => {
+    setEditing(false)
+    setKegs(kegs.map(keg => (keg.id === id ? updatedKeg : keg)))
+  }
 
   const addKeg = keg => {
     keg.id = kegs.length + 1;
@@ -42,13 +56,24 @@ export default function Main() {
         <Grid item xs={12}>
         </Grid>
         <Grid item xs={6}>
+        {editing ? (
+          <Paper className={classes.paper}>Edit Keg
+          <EditKeg
+          editing={editing}
+          setEditing={setEditing}
+          currentKeg={currentKeg}
+          updateKeg={updateKeg}
+          />
+          </Paper>
+        ) : (
           <Paper className={classes.paper}>Add Keg
           <AddKeg addKeg={addKeg} />
           </Paper>
+        )}
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>View Kegs
-          <Table kegs={kegs} deleteKeg={deleteKeg}/>
+          <Table kegs={kegs} editKeg={editKeg} deleteKeg={deleteKeg}/>
           </Paper>
         </Grid>
         <Grid item xs={3}>
@@ -67,3 +92,4 @@ export default function Main() {
     </div>
 );
 }
+export default Main;

@@ -16,7 +16,9 @@ const Table = props => (
         <td>{keg.type}</td>
         <td>{keg.brand}</td>
         <td>
-          <button className="button muted-button">Edit</button>
+          <button onClick={() => {
+            props.editKeg(keg)
+          }} className="button muted-button">Edit</button>
           <button onClick={() => props.deleteKeg(keg.id)} className="button muted-button">Delete</button>
         </td>
         </tr>
