@@ -1,7 +1,8 @@
 import React, {useState, useContext} from 'react';
-import {Paper, Container, Grid, Card, CardHeader} from '@material-ui/core';
+import {Paper, Container, Grid, Card, CardHeader, IconButton} from '@material-ui/core';
 import KegCrimenter from './KegCrimenter';
 import {KegContext} from './KegContext';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const Keg = ({type, brand, price, abv, id, pints, imageUrl}) => {
   const [kegs, setKegs] = useContext(KegContext);
@@ -16,6 +17,9 @@ const Keg = ({type, brand, price, abv, id, pints, imageUrl}) => {
             <h5>Price: ${price} | ABV: {abv}%{id}</h5>
             <h5>Pints Remaining: {pints}</h5>
             <h5><KegCrimenter/></h5>
+            <IconButton>
+            <DeleteIcon/>
+            </IconButton>
         </Paper>
     </Container>
     </Grid>

@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import{ Paper, Grid }from '@material-ui/core';
+import{ Paper, Grid, Container }from '@material-ui/core';
 import Table from './Table';
-import AddKegForm from './AddKegForm';
 import AddKeg from './AddKeg';
 import EditKeg from './EditKeg';
+import {KegContext} from '../context/KegContext';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,13 +20,9 @@ const useStyles = makeStyles(theme => ({
 
 const Main = () => {
   const classes = useStyles();
-  const kegData = [
-    { id: 1, type: 'Beer', brand: 'Tecate' },
-    { id: 2, type: 'Tequila', brand: 'Mescale' },
-    { id: 3, type: 'Cider', brand: 'Angry Orchard' },
-  ]
 
-  const [kegs, setKegs] = useState(kegData);
+
+  const [kegs, setKegs] = useContext(KegContext);
   const [editing, setEditing] = useState(false);
   const initialFormState = { id: null, type: '', brand: ''};
   const [currentKeg, setCurrentKeg] = useState(initialFormState);
@@ -46,12 +43,14 @@ const Main = () => {
   };
 
   const deleteKeg = id => {
+    setEditing(false)
     setKegs(kegs.filter(keg => keg.id !== id))
   }
 
   return (
-    <div className={classes.root}>
 
+    <div className={classes.root}>
+      <Container>
       <Grid container spacing={3}>
         <Grid item xs={12}>
         </Grid>
@@ -89,6 +88,7 @@ const Main = () => {
 
         </Grid>
       </Grid>
+    </Container>
     </div>
 );
 }

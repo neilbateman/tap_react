@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const EditKeg = props => {
   const [keg, setKeg] = useState(props.currentKeg)
@@ -8,6 +8,10 @@ const EditKeg = props => {
 
     setKeg({ ...keg, [name]: value })
   }
+  useEffect(() => {
+    setKeg(props.currentKeg)
+  }, [props])
+
 
   return (
     <form

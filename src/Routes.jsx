@@ -7,6 +7,7 @@ import ExpansionPanelKegs from './pages/ExpansionPanelKegs';
 import NewKegForm from './components/NewKegForm';
 import KegList from './context/KegList'
 import AddKeg from './context/AddKeg';
+import Main from './crud/Main';
 
 
 const Routes = () => (
@@ -15,6 +16,7 @@ const Routes = () => (
     <Route path="/kegs" component={KegList} />
     <Route path="/about" component={About} />
     <Route path="/expansion" component={ExpansionPanelKegs} />
+    <Route path="/crud" component={Main}/>
     <Route path="/order" component={AddKeg} />
   </Switch>
 );
