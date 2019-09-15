@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import{ Paper, Grid }from '@material-ui/core';
 import Table from './Table';
+import AddKegForm from './AddKegForm';
 
 
 const useStyles = makeStyles(theme => ({
@@ -23,7 +24,12 @@ export default function Main() {
     { id: 3, type: 'Cider', brand: 'Angry Orchard' },
   ]
 
-  const [kegs, setKegs] = useState(kegData)
+  const [kegs, setKegs] = useState(kegData);
+
+  const addKeg = keg => {
+    keg.id = kegs.length + 1;
+    setKegs([...kegs, keg])
+  };
 
   return (
     <div className={classes.root}>
@@ -32,7 +38,9 @@ export default function Main() {
         <Grid item xs={12}>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>Add Keg</Paper>
+          <Paper className={classes.paper}>Add Keg
+          <AddKegForm AddKeg={addKeg} />
+          </Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>View Kegs

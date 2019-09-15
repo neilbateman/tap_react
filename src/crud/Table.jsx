@@ -1,23 +1,31 @@
 import React from 'react'
 
-const Table = () => (
+const Table = props => (
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Username</th>
+        <th>Type</th>
+        <th>Brand</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Name data</td>
-        <td>Username data</td>
+    {props.kegs.length > 0 ? (
+      props.kegs.map(keg => (
+        <tr key={keg.id}>
+        <td>{keg.type}</td>
+        <td>{keg.brand}</td>
         <td>
           <button className="button muted-button">Edit</button>
           <button className="button muted-button">Delete</button>
         </td>
-      </tr>
+        </tr>
+      ))
+          ) : (
+            <tr>
+  <td colSpan={3}>No kegs</td>
+  </tr>
+    )}
     </tbody>
   </table>
 )
