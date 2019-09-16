@@ -26,8 +26,8 @@ export default function ButtonAppBar() {
             <Link to="/">Home</Link> |
             <Link to="/kegs"> Kegs</Link> |
             <Link to="/crud"> CRUD</Link> |
-            <Link to="/about"> About</Link> |
-            <Link to="/order"> Order</Link> <br/>
+            <Link to="/order"> Order</Link> |  
+            <Link to="/about"> About</Link><br/>
              # of kegs in store:  {kegs.length}
           </Typography>
         </Toolbar>
