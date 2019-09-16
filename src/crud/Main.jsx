@@ -54,7 +54,7 @@ const Main = () => {
     <br/>
       <Card className={classes.card}>
       <Container>
-          <Paper className={classes.paper}><Typography  variant="body2" color="textSecondary" component="p"><h3>Welcome to the CRUD view, where you can create, read update, and delete kegs. Refer to the Kegs page for more keg detail, and the order page to place a more specific order.</h3></Typography></Paper>
+          <Paper className={classes.paper}><Typography  variant="body2" color="textSecondary" component="p"><h3>Welcome to the CRUD view, where you can create, read, update, and delete kegs. Refer to the Kegs page for more keg detail, and the order page to place a more specific order.</h3></Typography></Paper>
       <Grid container spacing={3}>
         <Grid item xs={12}>
         </Grid>

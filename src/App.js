@@ -20,18 +20,14 @@ const App = () => {
   const classes = useStyles();
   return (
     <KegProvider>
-    <Container>
-    <div className="App" >
-      <BrowserRouter>
-      <NavBar/>
-      <Routes/>
-      </BrowserRouter><br/><br/><br/>
-  <br/><br/><br/>
-      <Footer/>
-    </div>
-    </Container>
+      <div className="App" >
+        <BrowserRouter>
+        <NavBar/>
+        <Routes/>
+        </BrowserRouter>
+        <Footer/>
+        </div>
     </KegProvider>
-
   );
 }
 
