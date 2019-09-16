@@ -36,14 +36,14 @@ const AddKeg = () => {
         <Container>
         <Paper>
         <h2>Specialty Keg Order Form</h2>
-        <FormControl onSubmit={AddKeg}>
+        <form onSubmit={AddKeg}>
             <input type="text" name="type" value={type} onChange={updateType} placeholder="Type of beverage"/>
             <input type="text" name="brand" value={brand} onChange={updateBrand} placeholder="Brand"/>
             <input type="number" name="pints" value={pints} onChange={updatePints} placeholder="Amount in Pints" min="0" max="100"/>
             <input type="number" name="price" value={price} onChange={updatePrice} placeholder="Price" min="0" max="100"/>
             <input type="number" name="abv" value={abv} onChange={updateAbv} placeholder="ABV" min="0" max="100"/>
-            <Button>Submit</Button>
-        </FormControl>
+            <button>Submit</button>
+        </form>
         </Paper>
         </Container>
         </div>
