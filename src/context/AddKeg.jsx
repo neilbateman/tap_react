@@ -49,7 +49,4 @@ const AddKeg = () => {
         </div>
     );
 };
-
-
-
 export default AddKeg;

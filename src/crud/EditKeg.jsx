@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Button from '@material-ui/core/Button';
 
 const EditKeg = props => {
   const [keg, setKeg] = useState(props.currentKeg);
@@ -22,8 +21,8 @@ const EditKeg = props => {
       <input type="text" name="type" value={keg.type} onChange={handleInputChange} />
       <label>Brand</label>
       <input type="text" name="brand" value={keg.brand} onChange={handleInputChange} />
-      <Button>Update Keg</Button>
-      <Button onClick={() => props.setEditing(false)}>Cancel</Button>
+      <button>Update Keg</button>
+      <button onClick={() => props.setEditing(false)}>Cancel</button>
     </form>
   )
 };
