@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default class UserGreeting extends React.Component {
     constructor(props) {
         super(props)
@@ -9,7 +8,7 @@ export default class UserGreeting extends React.Component {
         }
     }
 
-    render() { 
+    render() {
         if (this.state.isLoggedIn) {
             return (
                 <div>Welcome Neil</div>
