@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import{ Paper, Grid, Container }from '@material-ui/core';
+import{ Paper, Grid, Container, Typography }from '@material-ui/core';
 import Table from './Table';
 import AddKeg from './AddKeg';
 import EditKeg from './EditKeg';
@@ -45,8 +45,11 @@ const Main = () => {
   };
 
   return (
+
     <div className={classes.root}>
+    <br/>
       <Container>
+          <Paper className={classes.paper}><Typography  variant="body2" color="textSecondary" component="p"><h3>Welcome to the CRUD view, where you can create, read update, and delete kegs. Refer to the Kegs page for more keg detail, and the order page to place a more specific order.</h3></Typography></Paper>
       <Grid container spacing={3}>
         <Grid item xs={12}>
         </Grid>

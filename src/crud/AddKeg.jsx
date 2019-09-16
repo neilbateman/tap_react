@@ -21,9 +21,9 @@ const AddKeg = props => {
       }}
     >
       <label>Type</label>
-      <input type="text" name="type" value={keg.type} onChange={handleInputChange} />
+      <input type="text" name="type" value={keg.type} onChange={handleInputChange} required/>
       <label>Brand</label>
-      <input type="text" name="brand" value={keg.brand} onChange={handleInputChange} />
+      <input type="text" name="brand" value={keg.brand} onChange={handleInputChange} required/>
       <button>Add new keg</button>
     </form>
   )

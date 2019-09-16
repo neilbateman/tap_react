@@ -6,7 +6,6 @@ import beer from '../assets/beer.svg';
 import 'typeface-roboto';
 import '../App.css';
 
-
 const useStyles = makeStyles({
   root: {
     textAlign: 'center',
