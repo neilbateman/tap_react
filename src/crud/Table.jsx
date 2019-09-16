@@ -1,8 +1,6 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import{ Paper, Grid, Container }from '@material-ui/core';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,7 +15,6 @@ const useStyles = makeStyles(theme => ({
 }));
 const Table = props => {
   const classes = useStyles();
-
         return (
     <table className={classes.paper}>
       <thead>
@@ -46,9 +43,5 @@ const Table = props => {
       )}
       </tbody>
     </table>
-  )
-}
-
-
-
-export default Table
+  )};
+export default Table;

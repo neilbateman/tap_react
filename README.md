@@ -29,4 +29,4 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Component Tree
-![image of component tree](/src/assets/component-tree.jpg)
+![image of component tree](/src/assets/componenttree.jpg)

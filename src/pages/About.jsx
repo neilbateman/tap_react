@@ -1,8 +1,6 @@
 import React from 'react';
 import {Container} from '@material-ui/core';
 import componenttree  from '../assets/componenttree.jpg'
-import { makeStyles } from '@material-ui/core/styles';
-
 
 const style = {
   padding: '10px',
@@ -17,5 +15,4 @@ const About = () => (
   </Container>
   </div>
 );
-
 export default About;

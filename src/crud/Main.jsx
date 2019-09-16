@@ -6,7 +6,6 @@ import AddKeg from './AddKeg';
 import EditKeg from './EditKeg';
 import {KegContext} from '../context/KegContext';
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -20,8 +19,6 @@ const useStyles = makeStyles(theme => ({
 
 const Main = () => {
   const classes = useStyles();
-
-
   const [kegs, setKegs] = useContext(KegContext);
   const [editing, setEditing] = useState(false);
   const initialFormState = { id: null, type: '', brand: ''};
@@ -30,12 +27,12 @@ const Main = () => {
   const editKeg = keg => {
     setEditing(true)
     setCurrentKeg({ id: keg.id, type: keg.type, brand: keg.brand})
-  }
+  };
 
   const updateKeg = (id, updatedKeg) => {
     setEditing(false)
     setKegs(kegs.map(keg => (keg.id === id ? updatedKeg : keg)))
-  }
+  };
 
   const addKeg = keg => {
     keg.id = kegs.length + 1;
@@ -45,10 +42,9 @@ const Main = () => {
   const deleteKeg = id => {
     setEditing(false)
     setKegs(kegs.filter(keg => keg.id !== id))
-  }
+  };
 
   return (
-
     <div className={classes.root}>
       <Container>
       <Grid container spacing={3}>
@@ -74,18 +70,6 @@ const Main = () => {
           <Paper className={classes.paper}>View Kegs
           <Table kegs={kegs} editKeg={editKeg} deleteKeg={deleteKeg}/>
           </Paper>
-        </Grid>
-        <Grid item xs={3}>
-
-        </Grid>
-        <Grid item xs={3}>
-
-        </Grid>
-        <Grid item xs={3}>
-
-        </Grid>
-        <Grid item xs={3}>
-
         </Grid>
       </Grid>
     </Container>

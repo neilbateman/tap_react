@@ -7,7 +7,7 @@ const Keg = ({type, brand, price, abv, id, pints, imageUrl}) => {
   const [kegs, setKegs] = useContext(KegContext);
   let kegCount = kegs.length;
     const kegInformation =
-    <Grid item xs={8}>
+    <Grid item xs={12}>
     {[kegCount].map(value=>(
       <Grid key={value} item>
     <Container>
